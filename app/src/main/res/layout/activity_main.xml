@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rxd.drawandguess.MainActivity"
+    android:orientation="vertical">
+
+    <com.rxd.drawandguess.DrawView
+        android:id="@+id/draw_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:background="#ddd">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="粗细"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <com.rxd.drawandguess.StrokeWidthChooseView
+                android:id="@+id/strokeWidthChooseView"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp">
+
+                <ImageButton
+                    android:id="@+id/ib_back"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@mipmap/back"
+                    android:scaleType="centerCrop"/>
+
+                <ImageButton
+                    android:id="@+id/ib_eraser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/rubbish" />
+
+                <ImageButton
+                    android:id="@+id/ib_clear"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@mipmap/clear"
+                    android:scaleType="centerCrop"/>
+
+                </LinearLayout>
+
+            
+            </LinearLayout>
+        
+        <com.rxd.drawandguess.ColorHorizontalScrollView
+            android:id="@+id/colorHorizontalScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"></com.rxd.drawandguess.ColorHorizontalScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>
